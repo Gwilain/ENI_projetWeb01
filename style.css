@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,87.5,300..800;1,87.5,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+} 
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(246, 246, 246);
+
+    font-family: "Open Sans", sans-serif;
+    color :rgb(38, 38, 38);
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+
+header{
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+}
+
+h1, h2, h3{
+    font-weight: 100;
+}
+
+h1{
+    font-size: 2rem;
+    align-self: center;
+}
+
+h2{
+    font-size: 1.7rem;
+}
+
+/* partie droite du header */
+
+nav{
+    margin-top: 0.25rem;
+    font-size: 1.1rem;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav a{
+    color: rgb(66, 66, 66);
+    text-decoration: none;
+    padding:0 1rem;
+    border-right: solid 1px;
+}
+
+nav li:last-child a{
+    padding:0 0 0 1rem;
+   border-right: none;
+}
+
+#topListe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#displayType{
+    display: flex;
+    justify-content: end;
+    font-size: 1rem;
+}
+
+#displayType > *{
+    margin-left: 1rem;
+}
+
+#displayType label{
+    margin-left: 0.5rem;
+}
+
+ main{
+    flex: 1;
+ }
+
+
+.liste{
+    width: 85%;
+}
+
+.studentList{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.studentCards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.student{
+    padding: 1rem;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.listItem{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+
+.cardItem{
+    display: flex;
+    flex-direction: column;
+    /* width: calc(10%); */
+    margin:0rem;
+   
+}
+
+.liste li > p {
+    width:95%;
+    text-align: left;
+    display: inline;
+   /*  padding: 1rem; */
+   padding:0.5rem;
+   background-color: red;
+}
+
+
+.cardItem{
+
+}
+
+.nom{
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.details{
+    display: inline;
+    text-align: right;
+    background-color: #134A7F;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #0c3459;
+    padding:0.5rem 1rem 0.5rem 1rem;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.details:hover{
+    background-color: #1962a7;
+}
+
+
+
+footer{
+    color: white;
+    background-color: #134A7F;
+    padding:2rem 0;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img{
+    border: solid 1px white;
+}
+
+address{
+   /*  margin: 1rem; */
+   margin-top: 1rem;
+   align-self: flex-end;
+}
+
+
