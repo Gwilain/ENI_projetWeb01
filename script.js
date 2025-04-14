@@ -3,7 +3,10 @@ window.onload = init;
 function init(){
     document.getElementById("Tlist").addEventListener("change", changeDisplyType)
     document.getElementById("TCarte").addEventListener("change", changeDisplyType)
-    console.log("init");
+    //console.log("init");
+
+    document.getElementById("burger").addEventListener("click", showNavMobile);
+
 }
 
 function changeDisplyType(e){
@@ -21,25 +24,20 @@ function changeDisplyType(e){
             ul[0].classList.remove("studentCards");
             element.classList.remove("cardItem");
         }else{
-
             ul[0].classList.add("studentCards");
             element.classList.add("cardItem");
-        
         }
     }
-    
-    /* #studentList{
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    
-    #studentCards{
-        display: flex;
-        flex-flow: row wrap;
-    } */
-    /* lis.forEach((student) => {
-        student.style.color = "red";
-    });
- */
+
+}
+
+function showNavMobile(){
+    // getElementById("#navMobile").classList.toggle("navMobileShow");
+    let el =  document.getElementsByClassName("navMobile")[0];
+    el.classList.toggle("navMobileShow");
+    // el[0].classList.add("navMobileShow");
+
+
+    /* log("showNavMobile"); */
 
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENI - informations</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+        <header>
+            <div class="container">
+                <img id="logo" src="images/logo.png" alt="logo ENI">
+                <h1>Promo D2WM 2025 </h1>
+        
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="#">Carte</a></li>
+                            <li><a href="#">Informations</a></li>
+                            <li><a href="#">Préférences</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <!-- <button class="burger" aria-label="Menu">&#9776;</button> -->
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            
+            <h2>Préférences du site</h2>
+            
+
+            <div class="content">
+               
+                    <form action="submitPref">
+
+                        <div class="prefTheme">
+                            <label  for="theme">Thème du site</label>
+                            
+                            <select>
+                                <option value="light">Clair</option>
+                                <option value="dark">Sombre</option>
+                            </select>
+                        </div>
+
+                        <div class="prefDisplayList">
+                            <p>Format d'affichage de l'accueil</p>
+                            <input type="radio" name="theme" id="Tlist" checked value="liste">
+                            <label for="Tlist">Liste</label>
+                            
+                            <input type="radio" name="theme" id="TCarte" value="carte">
+                            <label for="TCarte">Cartes</label>
+                        </div>
+
+                    </form>
+        </main>
+        
+        <footer>
+            <div class="container">
+                <img id="logo" src="images/logo.png" alt="logo ENI">
+                <address>
+                    ENI Ecole <br>3 Rue Michael Faraday<br>44800 Saint-Herblain
+                </address>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+</body>
+</html>
