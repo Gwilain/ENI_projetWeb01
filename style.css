@@ -60,6 +60,13 @@ h2{
     font-size: 1.7rem;
 }
 
+h3{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color:#134A7F;
+}
+
 /* partie droite du header */
 
 nav{
@@ -75,7 +82,7 @@ nav a{
     color: rgb(66, 66, 66);
     text-decoration: none;
     padding:0 1rem;
-    border-right: solid 1px;
+    border-right: solid 1px rgb(66, 66, 66);
 }
 
 nav li:last-child a{
@@ -103,9 +110,15 @@ nav li:last-child a{
     margin-left: 0.5rem;
 }
 
- main{
+main{
     flex: 1;
- }
+}
+
+
+input[type="radio"]{
+    cursor: pointer;
+    accent-color: #134A7F;
+}
 
 
 .liste{
@@ -113,17 +126,18 @@ nav li:last-child a{
 }
 
 .studentList{
-    display: flex;
-    flex-flow: column nowrap;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
 }
 
 .studentCards{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.student{
+.content{
     padding: 1rem;
     border: 1px solid rgb(231, 231, 231);
     border-radius: 5px;
@@ -133,53 +147,49 @@ nav li:last-child a{
 .listItem{
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem 0;
 }
 
 
 .cardItem{
     display: flex;
     flex-direction: column;
-    /* width: calc(10%); */
-    margin:0rem;
-   
 }
 
 .liste li > p {
-    width:95%;
+    width:100%;
     text-align: left;
     display: inline;
-   /*  padding: 1rem; */
-   padding:0.5rem;
-   background-color: red;
-}
-
-
-.cardItem{
+   padding-top:0.5rem
 
 }
-
 .nom{
     text-transform: uppercase;
     font-weight:bold;
 }
 
-.details{
-    display: inline;
-    text-align: right;
+.btn{
     background-color: #134A7F;
     color: white;
     border-radius: 5px;
     border: solid 1px #0c3459;
     padding:0.5rem 1rem 0.5rem 1rem;
     text-decoration: none;
+    align-self: flex-end;
+}
+
+.details{
+    display: inline;
     transition: 0.5s;
+}
+
+.cardItem .btn{
+   align-self: flex-end;
+   margin-top: 1rem;
 }
 
 .details:hover{
     background-color: #1962a7;
 }
-
 
 
 footer{
@@ -197,9 +207,74 @@ footer img{
 }
 
 address{
-   /*  margin: 1rem; */
    margin-top: 1rem;
    align-self: flex-end;
 }
+
+.headPres{
+    margin-bottom: 1rem;
+    /* padding-left: 0.5rem; */
+}
+
+.informationsContent{
+    display: flex;
+   /*  flex-flow: row wrap; */
+}
+
+.informationsContent{
+    display: flex;
+    flex-flow: row wrap;
+    gap:1rem;
+}
+
+.infoText{
+    width:70%;
+}
+
+
+
+.utilsLinks{
+   /*  width: 40%; */
+   flex: 1;
+   
+}
+.utilsLinks li{
+    list-style: none;
+    border-bottom: solid 1px rgb(66, 66, 66);
+    padding-bottom: 1rem;
+    /* display: flex;
+    flex-flow: row wrap; */
+   /*  background-color: red; */
+}
+
+.utilsLinks ul li a{
+    text-decoration: none;
+}
+
+.utilsLinks p{
+    display: inline;
+   /*  background-color: green; */
+}
+
+.utilsLinks .btn{
+    display: block;
+    align-self: flex-end;
+    text-align: center;
+    width: 25%;
+   /*  float: right; */
+    margin-top: 0.5rem;
+}
+
+.contentLink{
+    
+}
+
+.imgLink{
+    width: 80px;
+    height: 80px;
+    margin:0 0.5rem 0 0;
+    float: left;
+}
+
 
 
