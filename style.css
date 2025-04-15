@@ -110,37 +110,72 @@ nav li:first-child a{
 
 .navMobile{
     display: none;
-   /*  width: 100vw; */
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     position: absolute;
+    width: 100vw;
     top: calc(100px + 0.5rem);
-    padding: 2rem;
-    /* margin-top: 100px; */
+    padding-top: 1rem;
+    /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    /* padding-bottom: 1rem; */
 }
 
-.navMobileShow{
-    display: block;
-}
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      
+    }
+    to {
+      transform: translateY(0);
+      
+    }
+  }
+
+/*   @keyframes slideUp {
+    from {
+      transform: translateY(-100%);
+      
+    }
+    to {
+      transform: translateY(0);
+      
+    }
+  } */
+
+
 
 .navMobileShow ul{
-    /* display: flex;
+    width: 100%;
+    /* width: 50%; */
+    padding-right: 10%;
+    display: flex;
     flex-direction: column;
-    background-color: white;
-    align-items: end;
-    margin-right: 4rem; */
+    align-items: flex-end;
+   /*  padding: 0 auto; */
+   /*  background-color: red; */
+}
+
+.navMobileShow ul li{
+   /*  width: 8rem; */
+    padding: 0.5rem 0; 
+    border-bottom: solid 1px rgb(66, 66, 66);
+    display: flex;
+   /*  justify-content: flex-end; */
+    /* width:50%; */
+   /*  background-color: green; */
 }
 
 .navMobileShow ul li a{
+    text-align: right;
+    width: 6rem;
     border-left: none;
-    border-bottom: solid 1px rgb(66, 66, 66);
-    display: block;
-    /* width: 5rem; */
-    
-    /* display: flex;
-    flex-direction: column;
-    background-color: red;
-    align-items: end; */
+   /*  border-bottom: solid 1px rgb(66, 66, 66); */
+    padding-right: 0;
+}
+
+.navMobileShow ul li:last-of-type{
+    border-bottom: none;
+    padding-bottom: 2rem;
 }
 
 
@@ -377,17 +412,31 @@ address{
         display: block;
     }
 
-    /* #navMobile{
-        display: show;
+    /* .navMobile{
+        display: none;
     } */
+    .navMobileShow{
+        display: flex;
+        animation: slideDown 0.4s ease forwards;
+        /* background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        width: 100vw;
+       
+        top: calc(100px + 0.5rem);
+        padding-top: 2rem;
+        padding-bottom: 2rem; */
+        /* justify-content: flex-end;
+        align-items: end; */
+    }
 
     #navHorizontal{
         display: none;
     }
 }
-
+/* 
 @media screen and (min-width: 993px){
-    #navMobile{
+    .navMobile{
         display: none;
     }
-}
+} */

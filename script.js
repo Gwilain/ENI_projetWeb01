@@ -1,20 +1,23 @@
 window.onload = init;
 
 function init(){
-    document.getElementById("Tlist").addEventListener("change", changeDisplyType)
-    document.getElementById("TCarte").addEventListener("change", changeDisplyType)
-    //console.log("init");
-
     document.getElementById("burger").addEventListener("click", showNavMobile);
 
+    let tlist = document.getElementById("Tlist");
+    let tCarte = document.getElementById("TCarte");
+    if(tlist && tCarte){
+        tlist.addEventListener("change", changeDisplyType)
+        tCarte.addEventListener("change", changeDisplyType)
+    }
+    //console.log("init");
 }
 
 function changeDisplyType(e){
-    console.log("display change en "+e.target.value);
 
     let lis =  document.getElementsByClassName("student");
     let ul = document.getElementsByClassName('studentList');
-    
+
+
     for (let i = 0; i < lis.length; i++) {
 
         const element = lis[i];
@@ -32,12 +35,6 @@ function changeDisplyType(e){
 }
 
 function showNavMobile(){
-    // getElementById("#navMobile").classList.toggle("navMobileShow");
     let el =  document.getElementsByClassName("navMobile")[0];
-    el.classList.toggle("navMobileShow");
-    // el[0].classList.add("navMobileShow");
-
-
-    /* log("showNavMobile"); */
-
+    el.classList.toggle("navMobileShow");  
 }
