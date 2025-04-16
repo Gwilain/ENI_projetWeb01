@@ -16,10 +16,12 @@
     --footer-color1:#133d60;
     --footer-color2:#006ec9;
     --footer-txt-color:white;
-  }
+    --navMobile-bg-color:white;
+ }
 
 .dark {
     --header-bg-color: black;
+    /* --header-bg-color: #1f1f1f; */
     --nav-color:#ececec;
     --bg-color : #181818;
     --txt-color : white;
@@ -33,8 +35,8 @@
     --btn-txt-color:black;
     --footer-color1:#0e2537;
     --footer-color2:#112c42;
-    
     --footer-txt-color:white;
+    --navMobile-bg-color:rgb(15, 15, 15);
   }
 
 
@@ -102,17 +104,18 @@ h2{
     font-size: 1.7rem;
 }
 
+h3, h4{
+    font-weight: bold;
+    color:var(--subTitle-color);
+}
+
 h3{
     font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color:var(--subTitle-color);
+    margin-bottom: 1rem;
 }
 
 h4{
     font-size: 1rem;
-    font-weight: bold;
-    color:var(--subTitle-color);
 }
 
 /* partie droite du header */
@@ -149,7 +152,7 @@ nav li:first-child a{
 
 .navMobile{
     display: none;
-    background-color: white;
+    background-color: var(--navMobile-bg-color);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     position: absolute;
     width: 100vw;
@@ -309,19 +312,17 @@ input[type="radio"]{
     background-color: var(--btn-hover-color);
 }
 
-
-
 .cardItem .btn{
    align-self: flex-end;
    margin-top: 1rem;
 }
 
 
-
 footer{
     color: var(--footer-txt-color);
-    background: linear-gradient(65deg,var(--footer-color1), var(--footer-color2));
+    background: linear-gradient(45deg,var(--footer-color1), var(--footer-color2));
     padding:2rem 0;
+    margin-top: 2rem;
 }
 
 footer .container{
@@ -361,6 +362,8 @@ address{
 .infoText p{
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    font-weight:300;
+    margin-bottom: 1rem;
 }
 
 .utilsLinks{
@@ -380,8 +383,6 @@ address{
 .utilsLinks li:last-of-type{
     border: none;
 }
-
-
 
 .utilsLinks ul li a{
     text-decoration: none;
@@ -411,11 +412,6 @@ address{
     width: 100%;
     
 } */
-
-
-.contentLink{
-    
-}
 
 .imgLink{
     width: 60px;
@@ -468,6 +464,10 @@ address{
 
     #navHorizontal{
         display: none;
+    }
+
+    .infoText{
+        width:100%;
     }
 }
 /* 

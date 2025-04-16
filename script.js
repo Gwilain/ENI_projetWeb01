@@ -20,49 +20,28 @@ function init(){
 }
 
 
-function handleTheme() {
-
-    const savedValue = localStorage.getItem("theme");
-    const select = document.getElementById("selectTheme");
-
-    function applyTheme(theme) {
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    }
-
-    if (select) {
-       
-        const themeToApply = savedValue ?? "light";
-        select.value = themeToApply;
-        applyTheme(themeToApply);
-
-       
-        select.addEventListener("change", (e) => {
-            const newTheme = e.target.value;
-            localStorage.setItem("theme", newTheme);
-            applyTheme(newTheme);
-        });
-    }
-}
-
-/* function handleTheme(){
+function handleTheme(){
 
     let theme = readTheme();
-
     let selectTheme = document.getElementById("selectTheme");
-    if(selectTheme){
-        selectTheme.addEventListener("change", onThemeSlectChange);
 
-        for(var i = 0; i = selectTheme.options.length; i++) {
-            if(i.value == temp) {
-                mySelect.selectedIndex = j;
-                break;
+    if(selectTheme){
+
+        selectTheme.value = theme;
+
+        selectTheme.addEventListener("change",  (e)=>{
+            if(selectTheme.value == "light"){
+                document.documentElement.classList.remove('dark');
+            }else{
+                document.documentElement.classList.add('dark');
             }
-        }
-    }
+        });
+
+        document.getElementById("validBtn").addEventListener("click", (e)=>{
+            localStorage.setItem("theme", selectTheme.value);
+        });
+
+    } 
 }
 
 function readTheme(){
@@ -79,25 +58,6 @@ function readTheme(){
     }
     return theme;
 }
-
-function onThemeSlectChange(e){
-
-    if(e.target.value == "light"){
-        document.documentElement.classList.remove('dark');
-    }else{
-        document.documentElement.classList.add('dark');
-    }
-    localStorage.setItem("theme", e.target.value);
-} */
-
-
-
-
-
-/* function makeItDark(){
-    document.documentElement.classList.add('dark');
-} */
-
 
 
 function changeDisplayType(e){
