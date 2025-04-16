@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENI - Accueil</title>
+    <title>ENI - carte</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <link rel="stylesheet" href="css/style.css">
     
 </head>
@@ -11,13 +14,13 @@
         <header>
             <div class="container">
                 <a href="index.html"><img id="logo" src="images/logo.png" alt="logo ENI"></a>
-                <h1>Promo D2WM 2025 </h1>
-        
+                <h1>Promo D2WM 2025</h1>
+
                 <div id="menu">
                     <nav id="navHorizontal">
                         <ul>
                             <li><a href="index.html">Accueil</a></li>
-                            <li><a href="carte.html">Carte</a></li>
+                            <li><a href="#">Carte</a></li>
                             <li><a href="informations.html">Informations</a></li>
                             <li><a href="preferences.html">Préférences</a></li>
                         </ul>
@@ -31,46 +34,17 @@
             
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="carte.html">Carte</a></li>
+                <li><a href="#">Carte</a></li>
                 <li><a href="informations.html">Informations</a></li>
                 <li><a href="preferences.html">Préférences</a></li>
             </ul>
         </nav>
-
-
-        <main>
-        
-            <section class="liste container">
-                <div id="topListe">
-                    <h2>Liste des apprenants</h2>
-                    <form id="displayType">
-
-                          <p>Type d'affichage :</p>
-                      
-                          <div>
-                            <input type="radio" name="display" id="radioList" value="list">
-                              <label for="radioList">Liste</label>
-                          </div>
-                            
-                            <div>
-                                <input type="radio" name="display" id="radioCard" value="card">
-                                <label for="radioCard">Cartes</label>
-                            </div>
-                      </form>
-                </div>
-                <ul class="studentList">
-        
-                </ul>
-                <template id="liTemplate">
-                    <li class="content student listItem">
-                        <p class="nom"></p>
-                        <p class="prenom"></p>
-                        <p class="ville"></p>
-                        <a class="btn details" href="#">Détail</a>
-                    </li>
-
-                </template>
-            </section>
+        <main class="container">
+            
+            <h2>Carte</h2>
+            <div id="map"></div>
+               
+                  
         </main>
         
         <footer>
@@ -82,5 +56,6 @@
             </div>
         </footer>
         <script src="js/script.js"></script>
+        <script src="js/map.js"></script>
 </body>
 </html>

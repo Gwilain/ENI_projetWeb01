@@ -1,4 +1,6 @@
-window.onload = init;
+document.addEventListener('DOMContentLoaded', init);
+
+const dataPath = "datas/data.json";
 
 function init(){
     
@@ -6,7 +8,7 @@ function init(){
     document.getElementById("burger").addEventListener("click", showNavMobile);
     
     if(document.querySelector(".studentList")){
-        fetch("datas/data.json").then(response=>response.json()).then(data=>handleData(data));
+        fetch(dataPath).then(response=>response.json()).then(data=>handleData(data));
     }
 
     handleTheme();
@@ -120,9 +122,6 @@ function showNavMobile(){
 
 
 function handleData(data){
-    /* let data =  */
-    /* console.log("data LOADED !!!");
-    console.log("data.length"+data.users.length); */
 
     const template = document.getElementById("liTemplate");
     const container = document.querySelector(".studentList");

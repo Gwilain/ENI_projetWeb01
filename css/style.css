@@ -13,6 +13,7 @@
     --btn-border-color:#0c3459;
     --btn-hover-color:#006ec9;
     --btn-txt-color:white;
+    --btn-txt-hover-color:white;
     --footer-color1:#133d60;
     --footer-color2:#006ec9;
     --footer-txt-color:white;
@@ -35,6 +36,7 @@
     --btn-border-color:#134A7F;
     --btn-hover-color:#006ec9;
     --btn-txt-color:black;
+    --btn-txt-hover-color:white;
     --footer-color1:#0e2537;
     --footer-color2:#112c42;
     --footer-txt-color:white;
@@ -316,6 +318,7 @@ input[type="radio"]{
 .btn:hover{
     /* background-color: #1962a7; */
     background-color: var(--btn-hover-color);
+    color: var(--btn-txt-hover-color);
 }
 
 .btnInactive:hover{
@@ -470,6 +473,9 @@ address{
 .prefBtns .btn{
     margin: 1rem 0 1rem 1rem;
 }
+
+#map { height: 95%; }
+
 
 
 @media screen and (max-width: 992px){
