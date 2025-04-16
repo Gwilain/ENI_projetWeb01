@@ -1,0 +1,51 @@
+{
+    "users":[
+    {
+        "id": 1,
+        "nom": "SCHMIDT",
+        "prenom": "Thomas",
+        "ville": "Maillezais",
+        "avatar": "01.jpg",
+        "anecdotes": "Joue de la Musique",
+        "coordonnees": {"latitude": "46.371268725451536","longitude": "-0.7392238873816038"}
+    },
+    {
+        "id": 2,
+        "nom": "CARAYON",
+        "prenom": "Benjamin",
+        "ville": "Dijon",
+        "avatar": "02.jpg",
+        "anecdotes": "Brasse sa propre bière",
+        "coordonnees": {
+          "latitude": "47.321587",
+          "longitude": "5.0446942"
+        }
+      }
+      ,
+      {
+        "id": 3,
+        "nom": "MAZUÉ",
+        "prenom": "Elodie",
+        "ville": "Meslay-le-Vidame",
+        "avatar": "03.jpg",
+        "anecdotes": "Travaillait dans le développement de produits cosmétiques",
+        "coordonnees": {
+          "latitude": "48.2806513",
+          "longitude": "1.4626627"
+        }
+    },
+    {
+      "id": 4,
+      "nom": "Gillet",
+      "prenom": "Ghislain",
+      "ville": "Rezé",
+      "avatar": "avatar-ghislan.png",
+      "anecdotes": "J'empaille des écureuils et crée avec des dioramas sur le thèmes des grandes batailles napoléoniennes.",
+      "coordonnees": {
+        "latitude": "48.2806513",
+        "longitude": "1.4626627"
+      }
+  }
+    ]
+
+}

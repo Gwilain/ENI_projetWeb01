@@ -17,6 +17,8 @@
     --footer-color2:#006ec9;
     --footer-txt-color:white;
     --navMobile-bg-color:white;
+    --btn-inactive-bg-color:#919191;
+    --btn-inactive-border-color:#4d4d4d;
  }
 
 .dark {
@@ -302,14 +304,22 @@ input[type="radio"]{
     text-decoration: none;
     align-self: flex-end;
     transition: 0.5s;
-
+    cursor: pointer;
     display: inline;
-   
+}
+
+.btnInactive{
+    background-color: var(--btn-inactive-bg-color);
+    border-color: var(--btn-inactive-border-color);
 }
 
 .btn:hover{
     /* background-color: #1962a7; */
     background-color: var(--btn-hover-color);
+}
+
+.btnInactive:hover{
+    background-color: var(--btn-inactive-border-color);
 }
 
 .cardItem .btn{
@@ -421,45 +431,55 @@ address{
 }
 
 
+.prefForm{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.prefForm > *{
+    margin: 1rem 0 ;
+}
 
 .prefTheme{
-    /* display: flex;
-    flex-direction: column;
-    gap:10rem; */
+   display: flex;
+   justify-content: space-between;
 }
 
-.prefTheme > *{
-    /* display: flex;
-    flex-direction: column;
-    gap:10rem; */
-    margin-bottom: 1rem;
+
+.prefDisplayList{
+    display: flex;
+    justify-content: space-between;
 }
+
 
 .prefDisplayList p{
     display: inline;
+    
 }
+
+.radiosDisplay input{
+    margin-left:1rem;
+}
+
+.prefBtns{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.prefBtns .btn{
+    margin: 1rem 0 1rem 1rem;
+}
+
 
 @media screen and (max-width: 992px){
     #burger{
         display: block;
     }
 
-    /* .navMobile{
-        display: none;
-    } */
     .navMobileShow{
         display: flex;
         animation: slideDown 0.4s ease forwards;
-        /* background-color: white;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        position: absolute;
-        width: 100vw;
-       
-        top: calc(100px + 0.5rem);
-        padding-top: 2rem;
-        padding-bottom: 2rem; */
-        /* justify-content: flex-end;
-        align-items: end; */
     }
 
     #navHorizontal{
@@ -467,12 +487,12 @@ address{
     }
 
     .infoText{
-        width:100%;
+        width:80%;
     }
+
+    .prefForm{
+        width: 100%;
+        margin: 0 auto;
+    }
+
 }
-/* 
-@media screen and (min-width: 993px){
-    .navMobile{
-        display: none;
-    }
-} */

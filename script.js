@@ -1,83 +1,108 @@
 window.onload = init;
 
 function init(){
-    document.getElementById("burger").addEventListener("click", showNavMobile);
     
-    //makeItDark();
-   
-
-    let tlist = document.getElementById("Tlist");
-    let tCarte = document.getElementById("TCarte");
-
-    if(tlist && tCarte){
-        tlist.addEventListener("change", changeDisplayType)
-        tCarte.addEventListener("change", changeDisplayType)
-    }
-    //console.log("init");
+    //nav mobile
+    document.getElementById("burger").addEventListener("click", showNavMobile);
 
     handleTheme();
+
+    handleDisplay();
+
+    handleSavePref();
+}
+
+function handleSavePref(){
+
+    let saveBtn = document.getElementById("savePref");
+
+    //si on est sur la page de prefs
+    if(saveBtn){
+
+        saveBtn.addEventListener("click", (e)=>{
+            localStorage.setItem("theme", document.getElementById("selectTheme").value);
+
+            let displayPref = document.querySelector('input[name="display"]:checked').value;
+            localStorage.setItem("display", displayPref );
+            console.log("document.getElementById(display).value = "+displayPref);
+            
+        });
+    } 
 
 }
 
 
 function handleTheme(){
 
-    let theme = readTheme();
-    let selectTheme = document.getElementById("selectTheme");
+    let theme = readStorage("theme", "dark");
+    if(theme=="dark"){
+        document.documentElement.classList.add('dark');
+     }
 
+    let selectTheme = document.getElementById("selectTheme");
+    //si on est sur la page de prefs
     if(selectTheme){
 
         selectTheme.value = theme;
-
         selectTheme.addEventListener("change",  (e)=>{
-            if(selectTheme.value == "light"){
-                document.documentElement.classList.remove('dark');
-            }else{
-                document.documentElement.classList.add('dark');
-            }
-        });
-
-        document.getElementById("validBtn").addEventListener("click", (e)=>{
-            localStorage.setItem("theme", selectTheme.value);
+            document.documentElement.classList.toggle('dark');
+            
         });
 
     } 
 }
 
-function readTheme(){
-    let localTheme = localStorage.getItem("theme");
-    if(!localTheme){
-        localStorage.setItem("theme", "light");
-        theme = "light";
-    }else{
-        theme = localTheme;
+
+function handleDisplay(){
+
+    let display = readStorage("display", "list");
+    
+    const radios = document.querySelectorAll("input[name='display']");
+
+    //si on est sur la page de prefs ou l'accueil
+    if(radios.length>0){
+        radios.forEach( radio =>{ 
+
+            radio.addEventListener("change", changeDisplayType);
+
+            if (radio.value === display) {
+                radio.checked = true;
+                radio.dispatchEvent(new Event("change"));
+            }
+
+            }
+         )
+
+        //  changeDisplayType(null);
     }
 
-    if(theme=="dark"){
-       document.documentElement.classList.add('dark');
+}
+
+function readStorage(localName, localDefault){
+
+    let value = localStorage.getItem(localName);
+    if (value === null) {
+        localStorage.setItem(localName, localDefault);
+        return localDefault;
     }
-    return theme;
+    return value;
+
 }
 
 
 function changeDisplayType(e){
 
-    let lis =  document.getElementsByClassName("student");
-    let ul = document.getElementsByClassName('studentList');
+    console.log("changeDisplayType");
+    
 
-    for (let i = 0; i < lis.length; i++) {
+    const isCard = e.target.value === "card"; 
+    const lis = document.querySelectorAll(".student");
+    const ul = document.querySelector(".studentList");
 
-        const element = lis[i];
-        console.log("lis"+lis[i]);
-        
-        if(e.target.value=="liste"){
-            ul[0].classList.remove("studentCards");
-            element.classList.remove("cardItem");
-        }else{
-            ul[0].classList.add("studentCards");
-            element.classList.add("cardItem");
-        }
-    }
+    ul.classList.toggle("studentCards", isCard);
+
+    lis.forEach(el => el.classList.toggle("cardItem", isCard));
+
 }
 
 

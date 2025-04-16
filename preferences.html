@@ -43,28 +43,33 @@
 
             <div class="content">
                
-                    <form>
+                    <form class="prefForm">
 
                         <div class="prefTheme">
                             <label  for="theme">Thème du site</label>
                             
-                            <select id="selectTheme">
+                            <select id="selectTheme" name="theme">
                                 <option value="light">Clair</option>
                                 <option value="dark">Sombre</option>
                             </select>
                         </div>
 
                         <div class="prefDisplayList">
-                            <p>Format d'affichage de l'accueil</p>
-                            <input type="radio" name="theme" id="Tlist" checked value="liste">
-                            <label for="Tlist">Liste</label>
+
+                            <p>Format d'affichage de l'accueil :</p>
                             
-                            <input type="radio" name="theme" id="TCarte" value="carte">
-                            <label for="TCarte">Cartes</label>
+                            <div class="radiosDisplay">
+                                <input type="radio" name="display" id="radioList" checked value="list">
+                                <label for="radioList">Liste</label>
+                                
+                                <input type="radio" name="display" id="radioCard" value="card">
+                                <label for="radioCard">Cartes</label>
+                            </div>
+
                         </div>
-                        <div>
-                            <button id="cancelBtn" class="btn">Annuler</button>
-                            <button id="validBtn" class="btn">Valider</button>
+                        <div class="prefBtns">
+                            <button id="cancelBtn" class="btn btnInactive">Annuler</button>
+                            <button id="savePref" class="btn">Valider</button>
                         </div> 
                     </form>
         </main>
