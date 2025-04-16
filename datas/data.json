@@ -1,0 +1,289 @@
+{
+    "users":[
+    {
+        "id": 1,
+        "nom": "SCHMIDT",
+        "prenom": "Thomas",
+        "ville": "Maillezais",
+        "avatar": "01.jpg",
+        "anecdotes": "Joue de la Musique",
+        "coordonnees": {"latitude": "46.371268725451536","longitude": "-0.7392238873816038"}
+    },
+    {
+        "id": 2,
+        "nom": "CARAYON",
+        "prenom": "Benjamin",
+        "ville": "Dijon",
+        "avatar": "02.jpg",
+        "anecdotes": "Brasse sa propre bière",
+        "coordonnees": {
+          "latitude": "47.321587",
+          "longitude": "5.0446942"
+        }
+      }
+      ,
+      {
+        "id": 3,
+        "nom": "MAZUÉ",
+        "prenom": "Elodie",
+        "ville": "Meslay-le-Vidame",
+        "avatar": "03.jpg",
+        "anecdotes": "Travaillait dans le développement de produits cosmétiques",
+        "coordonnees": {
+          "latitude": "48.2806513",
+          "longitude": "1.4626627"
+        }
+    },
+    {
+      "id": 4,
+      "nom": "Gillet",
+      "prenom": "Ghislain",
+      "ville": "Rezé",
+      "avatar": "avatar-ghislan.png",
+      "anecdotes": "Je recrée les grandes batailles napoléoniennes avec des écureuils empaillés.",
+      "coordonnees": {
+        "latitude": "47.183017",
+        "longitude": "-1.532262"
+        }
+    }, {
+      "id": 5,
+      "nom": "Fasol",
+      "prenom": "Rémi",
+      "ville": "Strasbourg",
+      "avatar": "avatar1.png",
+      "anecdotes": "Je joue du triangle dans une chorale de silence.",
+      "coordonnees": {
+        "latitude": "48.5734",
+        "longitude": "7.7521"
+      }
+    },
+    {
+      "id": 6,
+      "nom": "Do",
+      "prenom": "Lassi",
+      "ville": "La Rochelle",
+      "avatar": "avatar2.png",
+      "anecdotes": "Je fais des puzzles invisibles pour gagner du temps.",
+      "coordonnees": {
+        "latitude": "46.1603",
+        "longitude": "-1.1511"
+      }
+    },
+    {
+      "id": 7,
+      "nom": "Toketchup",
+      "prenom": "Thomas",
+      "ville": "Pau",
+      "avatar": "avatar3.png",
+      "anecdotes": "Je donne des cours de claquettes aux statues.",
+      "coordonnees": {
+        "latitude": "43.2951",
+        "longitude": "-0.3708"
+      }
+    },
+    {
+      "id": 8,
+      "nom": "Ochon",
+      "prenom": "Paul",
+      "ville": "Limoges",
+      "avatar": "avatar4.png",
+      "anecdotes": "Je fais des compétitions de sieste synchronisée.",
+      "coordonnees": {
+        "latitude": "45.8336",
+        "longitude": "1.2611"
+      }
+    },
+    {
+      "id": 9,
+      "nom": "Houtan",
+      "prenom": "Laurent",
+      "ville": "Vannes",
+      "avatar": "avatar5.png",
+      "anecdotes": "Je collectionne les bruits d’escaliers qui grincent.",
+      "coordonnees": {
+        "latitude": "47.6582",
+        "longitude": "-2.7608"
+      }
+    },
+    {
+      "id": 10,
+      "nom": "Ptipeu",
+      "prenom": "Justin",
+      "ville": "Perpignan",
+      "avatar": "avatar6.png",
+      "anecdotes": "Je pratique le saut à l’élastique sans élastique (mais que dans mes rêves).",
+      "coordonnees": {
+        "latitude": "42.6887",
+        "longitude": "2.8948"
+      }
+    },
+    {
+      "id": 11,
+      "nom": "Bonboeur",
+      "prenom": "Jean",
+      "ville": "Colmar",
+      "avatar": "avatar7.png",
+      "anecdotes": "Je fais de la peinture... avec des cornflakes.",
+      "coordonnees": {
+        "latitude": "48.0792",
+        "longitude": "7.3585"
+      }
+    },
+    {
+      "id": 12,
+      "nom": "Sonne",
+      "prenom": "Jacques",
+      "ville": "Nîmes",
+      "avatar": "avatar8.png",
+      "anecdotes": "Je participe à des débats philosophiques avec mon grille-pain.",
+      "coordonnees": {
+        "latitude": "43.8367",
+        "longitude": "4.3601"
+      }
+    },
+    {
+      "id": 13,
+      "nom": "Térieur",
+      "prenom": "Alex",
+      "ville": "Tours",
+      "avatar": "avatar9.png",
+      "anecdotes": "Je joue aux échecs contre mon ombre. Elle gagne souvent.",
+      "coordonnees": {
+        "latitude": "47.3941",
+        "longitude": "0.6848"
+      }
+    },
+    {
+      "id": 14,
+      "nom": "Grenier",
+      "prenom": "Léo",
+      "ville": "Biarritz",
+      "avatar": "avatar10.png",
+      "anecdotes": "Je fais des combats de coussins en apesanteur (simulation maison).",
+      "coordonnees": {
+        "latitude": "43.4832",
+        "longitude": "-1.5586"
+      }
+    },
+    {
+      "id": 15,
+      "nom": "Verse",
+      "prenom": "Alain",
+      "ville": "Besançon",
+      "avatar": "avatar11.png",
+      "anecdotes": "Je fais du patin à glace sur des miroirs IKEA.",
+      "coordonnees": {
+        "latitude": "47.2378",
+        "longitude": "6.0241"
+      }
+    },
+    {
+      "id": 16,
+      "nom": "Bou",
+      "prenom": "Alban",
+      "ville": "Saint-Malo",
+      "avatar": "avatar12.png",
+      "anecdotes": "Je parle couramment le langage des bulles de savon.",
+      "coordonnees": {
+        "latitude": "48.6493",
+        "longitude": "-2.0257"
+      }
+    },
+    {
+      "id": 17,
+      "nom": "Gonzola",
+      "prenom": "Igor",
+      "ville": "Chartres",
+      "avatar": "avatar13.png",
+      "anecdotes": "Je cultive des plantes carnivores végétariennes.",
+      "coordonnees": {
+        "latitude": "48.4468",
+        "longitude": "1.4890"
+      }
+    },
+    {
+      "id": 18,
+      "nom": "Cover",
+      "prenom": "Harry",
+      "ville": "Tarbes",
+      "avatar": "avatar14.png",
+      "anecdotes": "Je me déguise en moquette pour surprendre mes invités.",
+      "coordonnees": {
+        "latitude": "43.2333",
+        "longitude": "0.0833"
+      }
+    },
+    {
+      "id": 19,
+      "nom": "Denledo",
+      "prenom": "Geoffroy",
+      "ville": "Albi",
+      "avatar": "avatar15.png",
+      "anecdotes": "Je compose des poèmes en morse.",
+      "coordonnees": {
+        "latitude": "43.9298",
+        "longitude": "2.1480"
+      }
+    },
+    {
+      "id": 20,
+      "nom": "Peutabouche",
+      "prenom": "Firmin",
+      "ville": "Poitiers",
+      "avatar": "avatar16.png",
+      "anecdotes": "Je collectionne les tickets de caisse qui forment des haïkus.",
+      "coordonnees": {
+        "latitude": "46.5802",
+        "longitude": "0.3404"
+      }
+    },
+    {
+      "id": 21,
+      "nom": "Times",
+      "prenom": "Vincent",
+      "ville": "Mulhouse",
+      "avatar": "avatar17.png",
+      "anecdotes": "Je lis à l’envers pour mieux comprendre la fin avant le début.",
+      "coordonnees": {
+        "latitude": "47.7508",
+        "longitude": "7.3359"
+      }
+    },
+    {
+      "id": 22,
+      "nom": "Auboisdorman",
+      "prenom": "Abel",
+      "ville": "Bayonne",
+      "avatar": "avatar18.png",
+      "anecdotes": "Je fais du parapente en intérieur. Avec un sèche-cheveux.",
+      "coordonnees": {
+        "latitude": "43.4929",
+        "longitude": "-1.4748"
+      }
+    },
+    {
+      "id": 23,
+      "nom": "Quelquesjours",
+      "prenom": "Adam",
+      "ville": "Valence",
+      "avatar": "avatar19.png",
+      "anecdotes": "Je traduis les chansons de dauphins en beatbox.",
+      "coordonnees": {
+        "latitude": "44.9334",
+        "longitude": "4.8924"
+      }
+    },
+    {
+      "id": 24,
+      "nom": "Glace",
+      "prenom": "Brice",
+      "ville": "Chambéry",
+      "avatar": "avatar20.png",
+      "anecdotes": "Je danse le flamenco sur du hard rock.",
+      "coordonnees": {
+        "latitude": "45.5646",
+        "longitude": "5.9178"
+      }
+    }
+  ]
+}

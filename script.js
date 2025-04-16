@@ -4,6 +4,10 @@ function init(){
     
     //nav mobile
     document.getElementById("burger").addEventListener("click", showNavMobile);
+    
+    if(document.querySelector(".studentList")){
+        fetch("datas/data.json").then(response=>response.json()).then(data=>handleData(data));
+    }
 
     handleTheme();
 
@@ -98,6 +102,9 @@ function changeDisplayType(e){
     const isCard = e.target.value === "card"; 
     const lis = document.querySelectorAll(".student");
     const ul = document.querySelector(".studentList");
+    /* console.log("ul = "+ul); */
+    
+    // const ul = document.getElementById("studentList");
 
     ul.classList.toggle("studentCards", isCard);
 
@@ -109,4 +116,40 @@ function changeDisplayType(e){
 function showNavMobile(){
     let el =  document.getElementsByClassName("navMobile")[0];
     el.classList.toggle("navMobileShow");  
+}
+
+
+function handleData(data){
+    /* let data =  */
+    /* console.log("data LOADED !!!");
+    console.log("data.length"+data.users.length); */
+
+    const template = document.getElementById("liTemplate");
+    const container = document.querySelector(".studentList");
+
+    // const clone = document.importNode(template.content, true);
+
+    //const clone =  template.content.cloneNode(true);
+    console.log("container = "+container);
+    
+
+    data.users.forEach(el => {
+
+        console.log("user "+ el.prenom);
+        
+        const clone = template.content.cloneNode(true);
+
+        clone.querySelector('.nom').textContent = el.nom;
+
+        clone.querySelector('.prenom').textContent = el.prenom;
+
+        clone.querySelector('.ville').textContent = el.ville;
+
+        // Et enfin l’ajouter à ta page
+        container.appendChild(clone)
+
+
+    });
+
+    handleDisplay();
 }

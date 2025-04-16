@@ -47,58 +47,29 @@
 
                           <p>Type d'affichage :</p>
                       
-                          <input type="radio" name="display" id="radioList" value="list">
-                            <label for="radioList">Liste</label>
+                          <div>
+                            <input type="radio" name="display" id="radioList" value="list">
+                              <label for="radioList">Liste</label>
+                          </div>
                             
-                            <input type="radio" name="display" id="radioCard" value="card">
-                            <label for="radioCard">Cartes</label>
+                            <div>
+                                <input type="radio" name="display" id="radioCard" value="card">
+                                <label for="radioCard">Cartes</label>
+                            </div>
                       </form>
                 </div>
                 <ul class="studentList">
-                    <li class="content student listItem">
-                        <p class="nom">Dupont</p>
-                        <p class="prenom">Jean</p>
-                        <p class="ville">Nantes</p>
-                        <a class="btn details" href="#">Détail</a>
-                    </li>
-        
-                    <li class="content student listItem">
-                        <p class="nom">La Pointe</p>
-                        <p class="prenom">Bobby</p>
-                        <p class="ville">Paris</p>
-                        <a class="btn details" href="#">Détail</a>
-                    </li>
-        
-                    <li class="content student listItem">
-                        <p class="nom">Dupont</p>
-                        <p class="prenom">Jean</p>
-                        <p class="ville">Nantes</p>
-                        <a class="btn details" href="#">Détail</a>
-                    </li>
-        
-                    <li class="content student listItem">
-                        <p class="nom">La-Pointe</p>
-                        <p class="prenom">Bobby</p>
-                        <p class="ville">Paris</p>
-                        <a class="btn details" href="#">Détail</a>
-                    </li>
-        
-                    <li class="content student listItem">
-                        <p class="nom">Dupont</p>
-                        <p class="prenom">Jean</p>
-                        <p class="ville">Nantes</p>
-                        <a class="btn details" href="#">Détail</a>
-                    </li>
-        
-                    <li class="content student listItem">
-                        <p class="nom">La Pointe</p>
-                        <p class="prenom">Bobby</p>
-                        <p class="ville">Paris</p>
-                        <a class="btn details" href="#">Détail</a>
-                    </li>
         
                 </ul>
-        
+                <template id="liTemplate">
+                    <li class="content student listItem">
+                        <p class="nom"></p>
+                        <p class="prenom"></p>
+                        <p class="ville"></p>
+                        <a class="btn details" href="#">Détail</a>
+                    </li>
+
+                </template>
             </section>
         </main>
         
