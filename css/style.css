@@ -20,6 +20,8 @@
     --navMobile-bg-color:white;
     --btn-inactive-bg-color:#919191;
     --btn-inactive-border-color:#4d4d4d;
+    --modal-backGround-color:white;
+    --modal-border-color:#e7e7e7;
  }
 
 .dark {
@@ -41,6 +43,8 @@
     --footer-color2:#112c42;
     --footer-txt-color:white;
     --navMobile-bg-color:rgb(15, 15, 15);
+    --modal-backGround-color:black;
+    --modal-border-color:rgb(32, 32, 32);
   }
 
 
@@ -63,6 +67,7 @@ body{
 
     font-family: "Open Sans", sans-serif;
     color :var(--txt-color);
+    /* font-size: 1.2rem; */
 }
 
 .container{
@@ -142,6 +147,10 @@ nav a{
 
 nav li:first-child a{
    border-left: none; 
+}
+
+.menucurrentPage{
+    color: var(--subTitle-color);
 }
 
 #burger{
@@ -276,21 +285,35 @@ input[type="radio"]{
 .listItem{
     display: flex;
     justify-content: space-between;
+    
 }
 
+
+
+.liste li p {
+   width:20%;
+   text-align: left;
+   display: inline;
+   padding-top:0.5rem;
+}
+
+.liste li > p:last-of-type {
+    width:40%;
+}
 
 .cardItem{
     display: flex;
     flex-direction: column;
 }
 
-.liste li > p {
-    width:100%;
-    text-align: left;
-    display: inline;
-   padding-top:0.5rem
 
+
+ .liste .cardItem > p:last-of-type{
+    width: 100%;
 }
+
+
+
 .nom{
     text-transform: uppercase;
     font-weight:bold;
@@ -298,7 +321,6 @@ input[type="radio"]{
 
 .btn{
     background-color: var(--btn-bg-color);
-    /* background: linear-gradient(125deg,#133d60,  #006ec9); */
     color: var(--btn-txt-color);
     border-radius: 5px;
     border: solid 1px var(--btn-border-color);
@@ -326,7 +348,7 @@ input[type="radio"]{
 }
 
 .cardItem .btn{
-   align-self: flex-end;
+   /* align-self: flex-end; */
    margin-top: 1rem;
 }
 
@@ -474,9 +496,108 @@ address{
     margin: 1rem 0 1rem 1rem;
 }
 
-#map { height: 95%; }
+/* MODAL ACCUEIL */
 
+#dialog {
+    position: fixed;
+    /* visibility: hidden; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+  }
+  
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+    background: var(--modal-backGround-color);
+    border: solid 1px var(--modal-border-color);
+    padding: 1em;
+    z-index: 1;
+    border-radius: 8px;
+    max-width:600px;
+}
 
+.dialog-header {
+    display: flex;
+
+}
+
+#imgModal{
+    border: solid 1px var(--modal-border-color);
+    border-radius: 3px;
+    width: 200px;
+    height: 200px;
+
+    margin: 0 1rem 1rem 0;
+}
+#dialog-header-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+#dialog-header-info h3{
+    margin-bottom: 0; 
+    
+}
+
+#prenom{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--subTitle-color);
+    margin-top: -0.5rem;
+    padding: 0;
+}
+
+#anecdote{
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+#ville{
+    flex:1;
+
+}
+
+#dialog-header-info p:last-child {
+    align-self: bottom;
+}
+
+#closeDialog {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* MAP */
+
+#map { 
+    height: 95%; 
+    min-height: 400px;
+    border: 1px solid var(--content-border-color);
+    border-radius: 5px;
+    /* z-index: -1; */
+}
 
 @media screen and (max-width: 992px){
     #burger{

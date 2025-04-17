@@ -78,8 +78,6 @@ function handleDisplay(){
 
             }
          )
-
-        //  changeDisplayType(null);
     }
 
 }
@@ -102,11 +100,8 @@ function changeDisplayType(e){
     
 
     const isCard = e.target.value === "card"; 
-    const lis = document.querySelectorAll(".student");
+    const lis = document.querySelectorAll(".listItem");
     const ul = document.querySelector(".studentList");
-    /* console.log("ul = "+ul); */
-    
-    // const ul = document.getElementById("studentList");
 
     ul.classList.toggle("studentCards", isCard);
 
@@ -126,29 +121,103 @@ function handleData(data){
     const template = document.getElementById("liTemplate");
     const container = document.querySelector(".studentList");
 
-    // const clone = document.importNode(template.content, true);
-
-    //const clone =  template.content.cloneNode(true);
-    console.log("container = "+container);
-    
-
     data.users.forEach(el => {
 
-        console.log("user "+ el.prenom);
-        
         const clone = template.content.cloneNode(true);
 
         clone.querySelector('.nom').textContent = el.nom;
-
         clone.querySelector('.prenom').textContent = el.prenom;
-
         clone.querySelector('.ville').textContent = el.ville;
+        
+        clone.querySelector('.btn').addEventListener('click', e =>{
+            e.preventDefault();    
+            showUser(el)
+        });
 
-        // Et enfin l’ajouter à ta page
+        /* showUser(el) */
         container.appendChild(clone)
-
-
     });
 
     handleDisplay();
 }
+
+/* *********************** */
+/* MODALE ACCUEIL */
+/* *********************** */
+
+function showUser(user){
+
+    const rootImgUrl = "images/users/"
+
+    const openBtn = document.getElementById('openDialog');
+    const closeBtn = document.getElementById('closeDialog');
+    const dialog = document.getElementById('dialog');
+    const dialogContent = dialog.querySelector('.dialog-content');
+
+    const avatar = document.getElementById("imgModal");
+    const nom = document.getElementById("nom");
+    const prenom = document.getElementById("prenom");
+    const ville = document.getElementById("ville");
+    const anecdote = document.getElementById("anecdote");
+    
+    let lastFocusedElement;
+    
+    lastFocusedElement = document.activeElement;
+
+    dialog.style.display = "flex";
+
+    avatar.src = rootImgUrl + user.avatar;
+    
+    nom.innerText = user.nom;
+    prenom.innerText = user.prenom;
+    ville.innerText = user.ville;
+    anecdote.innerText = user.anecdotes;
+
+
+
+    dialogContent.focus();
+    trapFocus(dialogContent);
+    
+    closeBtn.addEventListener('click', closeDialog);
+    
+
+    function closeDialog() {
+      
+        dialog.style.display = "none";
+        
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+    //   if (dialog.style.display == "none" && e.key === 'Escape') {
+        closeDialog();
+      }
+    });
+    
+    // Focus trap
+    function trapFocus(container) {
+      const focusableEls = container.querySelectorAll('button, [tabindex]:not([tabindex="-1"])');
+      const firstEl = focusableEls[0];
+      const lastEl = focusableEls[focusableEls.length - 1];
+    
+      container.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstEl) {
+              e.preventDefault();
+              lastEl.focus();
+            }
+          } else {
+            if (document.activeElement === lastEl) {
+              e.preventDefault();
+              firstEl.focus();
+            }
+          }
+        }
+      });
+    }
+
+}
+
+

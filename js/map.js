@@ -2,46 +2,46 @@ document.addEventListener('DOMContentLoaded', initMap);
 let map;
 
 function initMap(){
-    map = L.map('map').setView([46.603354, 1.888334], 6.5);
-    
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
 
-    fetch(dataPath).then(response=>response.json()).then(data=>initMarkers(data));
+    const tiles = new Map();
+    tiles["light"] = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+    tiles["dark"] = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+
+    urlMap = tiles[ localStorage.getItem("theme") ];
+
+    map = L.map('map').setView([46.603354, 1.888334], 6);
+    
+    L.tileLayer(urlMap, {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+      
+   fetch(dataPath).then(response=>response.json()).then(data=>initMarkers(data));
 
 }
 
 
 function initMarkers(data){
 
-    let marker = L.marker([47.183017,-1.532262]).addTo(map);
-
     data.users.forEach(el => {
-
-        console.log("el.coordonnees.longitude = "+el.coordonnees.longitude);
-        console.log("el.coordonnees.latitude = "+el.coordonnees.latitude);
-        
-
         let long = Number( el.coordonnees.longitude);
         let lat = Number(el.coordonnees.latitude);
-       
-        let marker = L.marker([lat, long]).addTo(map);
+
+        let icon = L.icon({
+            iconUrl: 'images/marker.png',
+            iconSize: [36, 53],
+            iconAnchor: [16, 53],
+            popupAnchor: [1, -44],
+            shadowUrl: null
+        }); 
+
+        let marker = L.marker([lat, long], { icon: icon }).addTo(map);
 
         let name = el.nom;
         let firstname = el.prenom;
-
-
-        marker.bindPopup("<b class='nom'>"+name+"</b> <br>"+firstname).openPopup();
+        marker.bindPopup("<b class='nom'>"+name+"</b> <br>"+firstname);
 
 
     });
-
-
-
 }
-
-/* 
-"latitude": "47.183017",
-        "longitude": "-1.532262" */

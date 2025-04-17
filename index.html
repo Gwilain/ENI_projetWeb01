@@ -16,7 +16,7 @@
                 <div id="menu">
                     <nav id="navHorizontal">
                         <ul>
-                            <li><a href="index.html">Accueil</a></li>
+                            <li><a class="menucurrentPage" href="index.html">Accueil</a></li>
                             <li><a href="carte.html">Carte</a></li>
                             <li><a href="informations.html">Informations</a></li>
                             <li><a href="preferences.html">Préférences</a></li>
@@ -30,7 +30,7 @@
         <nav class="navMobile">
             
             <ul>
-                <li><a href="index.html">Accueil</a></li>
+                <li><a class="menucurrentPage" href="index.html">Accueil</a></li>
                 <li><a href="carte.html">Carte</a></li>
                 <li><a href="informations.html">Informations</a></li>
                 <li><a href="preferences.html">Préférences</a></li>
@@ -62,15 +62,50 @@
         
                 </ul>
                 <template id="liTemplate">
-                    <li class="content student listItem">
+                    <li class="content listItem">
                         <p class="nom"></p>
                         <p class="prenom"></p>
                         <p class="ville"></p>
-                        <a class="btn details" href="#">Détail</a>
+                        <a class="btn" href="#">Détail</a>
                     </li>
 
                 </template>
             </section>
+            
+        
+
+        <div id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+            <div class="overlay"></div>
+            <div class="dialog-content" tabindex="-1">
+
+                <div class="dialog-header">
+                    
+                    <img id="imgModal" src="images/users/default-avatar.png" alt="">
+
+                    <div id="dialog-header-info">
+                        
+                        <h3 id="nom">Nom</h3>
+                        <p id="prenom">prénom</p>
+                        <p id="ville">ville</p>
+
+                        <p id="anecdote"></p>
+                    </div>
+
+                </div>
+                <p id="anescdotes"></p>
+                <p id="pres">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit? Libero accusamus repudiandae dolor asperiores odit quasi vero provident assumenda, at odio, iste non hic, aperiam doloremque. Eius recusandae officiis delectus eaque vitae voluptatem praesentium, quibusdam voluptate odit optio reprehenderit sequi numquam amet debitis, tenetur nam corrupti eos, quos libero.</p>
+                
+                <button id="closeDialog" aria-label="Fermer la modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                      <line x1="0" y1="0" x2="32" y2="32" />
+                      <line x1="32" y1="0" x2="0" y2="32" />
+                    </svg>
+                </button>
+<!-- 
+                <button id="closeDialog">Fermer</button> -->
+            </div>
+        </div>
         </main>
         
         <footer>
