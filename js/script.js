@@ -111,8 +111,9 @@ function changeDisplayType(e){
 
 
 function showNavMobile(){
-    let el =  document.getElementsByClassName("navMobile")[0];
-    el.classList.toggle("navMobileShow");  
+
+    let el =  document.querySelector(".navMobile");
+    el.classList.toggle("navMobileShow");
 }
 
 
