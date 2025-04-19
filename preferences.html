@@ -36,42 +36,44 @@
                 <li><a class="menucurrentPage" href="preferences.html">Préférences</a></li>
             </ul>
         </nav>
-        <main class="container">
-            
-            <h2>Préférences du site</h2>
-            
+        <main>
+            <section class="container">  
+                <h2>Préférences du site</h2>
+                
 
-            <div class="content">
-               
-                    <form class="prefForm">
+                <div id="prefMain" class="content">
+                
+                        <form class="prefForm">
 
-                        <div class="prefTheme">
-                            <label  for="theme">Thème du site</label>
-                            
-                            <select id="selectTheme" name="theme">
-                                <option value="light">Clair</option>
-                                <option value="dark">Sombre</option>
-                            </select>
-                        </div>
-
-                        <div class="prefDisplayList">
-
-                            <p>Format d'affichage de l'accueil :</p>
-                            
-                            <div class="radiosDisplay">
-                                <input type="radio" name="display" id="radioList" checked value="list">
-                                <label for="radioList">Liste</label>
+                            <div class="prefTheme">
+                                <label  for="theme">Thème du site</label>
                                 
-                                <input type="radio" name="display" id="radioCard" value="card">
-                                <label for="radioCard">Cartes</label>
+                                <select id="selectTheme" name="theme">
+                                    <option value="light">Clair</option>
+                                    <option value="dark">Sombre</option>
+                                </select>
                             </div>
 
-                        </div>
-                        <div class="prefBtns">
-                            <button id="cancelBtn" class="btn btnInactive">Annuler</button>
-                            <button id="savePref" class="btn">Valider</button>
-                        </div> 
-                    </form>
+                            <div class="prefDisplayList">
+
+                                <p>Format d'affichage de l'accueil :</p>
+                                
+                                <div class="radiosDisplay">
+                                    <input type="radio" name="display" id="radioList" checked value="list">
+                                    <label for="radioList">Liste</label>
+                                    
+                                    <input type="radio" name="display" id="radioCard" value="card">
+                                    <label for="radioCard">Cartes</label>
+                                </div>
+
+                            </div>
+                            <div class="prefBtns">
+                                <button id="cancelBtn" class="btn btnInactive">Annuler</button>
+                                <button id="savePref" class="btn">Valider</button>
+                            </div> 
+                        </form>
+
+            </section>
         </main>
         
         <footer>

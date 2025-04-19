@@ -10,26 +10,24 @@
 <body>
         <header>
             <div class="container">
-                <a href="index.html"><img id="logo" src="images/logo.png" alt="logo ENI"></a>
+                <a href="index.html" id="logo"><img id="logo" src="images/logo.png" alt="logo ENI"></a>
                 <h1>Promo D2WM 2025 </h1>
         
-                <div id="menu">
-                    <nav id="navHorizontal">
+                
+                    <nav>
                         <ul>
                             <li><a class="menucurrentPage" href="index.html">Accueil</a></li>
                             <li><a href="carte.html">Carte</a></li>
                             <li><a href="informations.html">Informations</a></li>
                             <li><a href="preferences.html">Préférences</a></li>
                         </ul>
+
+                        <button id="burger" aria-label="Menu">&#9776;</button>
                     </nav>
-                    
-                    <button id="burger" aria-label="Menu">&#9776;</button>
-                </div>
             </div>
         </header>
-        <nav class="navMobile">
-            
-            <ul>
+        <nav class="navMobile">  
+            <ul class="container">
                 <li><a class="menucurrentPage" href="index.html">Accueil</a></li>
                 <li><a href="carte.html">Carte</a></li>
                 <li><a href="informations.html">Informations</a></li>
@@ -39,37 +37,36 @@
 
 
         <main>
-        
-            <section class="liste container">
-                <div id="topListe">
-                    <h2>Liste des apprenants</h2>
-                    <form id="displayType">
-
-                          <p>Type d'affichage :</p>
-                      
-                          <div>
-                            <input type="radio" name="display" id="radioList" value="list">
-                              <label for="radioList">Liste</label>
-                          </div>
-                            
-                            <div>
-                                <input type="radio" name="display" id="radioCard" value="card">
-                                <label for="radioCard">Cartes</label>
-                            </div>
-                      </form>
-                </div>
-                <ul class="studentList">
-        
-                </ul>
-                <template id="liTemplate">
-                    <li class="content listItem">
-                        <p class="nom"></p>
-                        <p class="prenom"></p>
-                        <p class="ville"></p>
-                        <a class="btn" href="#">Détail</a>
-                    </li>
-
-                </template>
+            <section id="indexMain" class="container">
+                    <div id="topListe">
+                        <h2>Liste des apprenants</h2>
+                        <form id="displayType">
+                    
+                              <p>Type d'affichage :</p>
+                          
+                              <div>
+                                <input type="radio" name="display" id="radioList" value="list">
+                                  <label for="radioList">Liste</label>
+                              </div>
+                                
+                                <div>
+                                    <input type="radio" name="display" id="radioCard" value="card">
+                                    <label for="radioCard">Cartes</label>
+                                </div>
+                          </form>
+                    </div>
+                    <ul class="studentList">
+                        <template id="liTemplate">
+                            <li class="content listItem">
+                                <p class="nom"></p>
+                                <p class="prenom"></p>
+                                <p class="ville"></p>
+                                <a class="btn" href="#">Détail</a>
+                            </li>
+                        
+                        </template>
+                    </ul>
+                
             </section>
             
         
@@ -95,15 +92,13 @@
                 <p id="anescdotes"></p>
                 <p id="pres">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odit? Libero accusamus repudiandae dolor asperiores odit quasi vero provident assumenda, at odio, iste non hic, aperiam doloremque. Eius recusandae officiis delectus eaque vitae voluptatem praesentium, quibusdam voluptate odit optio reprehenderit sequi numquam amet debitis, tenetur nam corrupti eos, quos libero.</p>
                 
-                <button id="closeDialog" aria-label="Fermer la modal">
+                <button id="closeDialog" aria-label="Fermer la modal" class="close-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                       <line x1="0" y1="0" x2="32" y2="32" />
                       <line x1="32" y1="0" x2="0" y2="32" />
                     </svg>
                 </button>
-<!-- 
-                <button id="closeDialog">Fermer</button> -->
             </div>
         </div>
         </main>

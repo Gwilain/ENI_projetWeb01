@@ -95,10 +95,7 @@ function readStorage(localName, localDefault){
 
 
 function changeDisplayType(e){
-
-    console.log("changeDisplayType");
     
-
     const isCard = e.target.value === "card"; 
     const lis = document.querySelectorAll(".listItem");
     const ul = document.querySelector(".studentList");
@@ -182,8 +179,8 @@ function showUser(user){
     closeBtn.addEventListener('click', closeDialog);
     
 
-    function closeDialog() {
-      
+    function closeDialog(e) {
+      e.preventDefault();
         dialog.style.display = "none";
         
       if (lastFocusedElement) lastFocusedElement.focus();
