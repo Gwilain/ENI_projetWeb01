@@ -77,18 +77,16 @@ body{
 
 h1, h2, h3{
     font-weight: 100;
-    /* margin-bottom: 1rem; */
 }
 
 h1{
     font-size: 2rem;
     align-self: center;
-    /* background-color: cornflowerblue; */
 }
 
 h2{
     font-size: 1.7rem;
-   /*  margin-bottom: 1rem; */
+    margin-bottom: 0.5rem;
 }
 
 h3, h4{
@@ -104,25 +102,22 @@ h3{
 
 
 .container{
-    width: 90%;
+    width:95%;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-self: flex-start;
-/*     background-color: green; */
+    margin: 0 auto;
 }
 
 p{
-   /*  margin-bottom: 1rem; */
-    /* margin: 1rem;
-    margin-left: 0; */
     margin-bottom: 1rem;
     font-weight: 100;
 }
 
 li{
-    margin-bottom: 1rem;  
-    padding-bottom: 1rem;  
+    /* margin-bottom: 1rem;  
+    padding-bottom: 1rem;   */
 }
 
 .content{
@@ -145,15 +140,12 @@ header{
 header img{
     width: 100px;
     height: auto;
-    /* vertical-align: middle; */
     display: block;
 }
 
 
-nav{
-    /* margin-top: 0.25rem; */
-    /* font-size: 1.1rem; */
-/*     background-color: red; */
+nav ul{
+    display: none;
 }
 
 nav ul li{
@@ -172,6 +164,10 @@ nav li:first-child a{
    border-left: none; 
 }
 
+.menucurrentPage{
+    color: var(--subTitle-color);
+}
+
 #burger{
     margin: -0.5rem -1rem;
     /* padding: -1rem; */
@@ -181,7 +177,7 @@ nav li:first-child a{
     cursor: pointer;
     font-size: 2rem;
     color: var(--nav-color);
-    display: none;
+    display: flex;
     /* background-color: red; */
 }
 
@@ -199,15 +195,20 @@ nav li:first-child a{
 
 }
 
+.navMobileShow{
+    display: flex;
+    animation: slideDown 0.4s ease forwards;
+}
 
 
 .navMobileShow ul{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;/* 
+    align-items: flex-end;
+    
+    /* 
     background-color: red; */
 }
-
 
 
 .navMobileShow ul li{
@@ -253,10 +254,11 @@ input[type="radio"]{
 
 /* PARTIE CENTRALE */
 main{
+    padding: 1rem 0;
     flex:1;
     display: flex;
     justify-content: center;
-    margin: 1rem 0;;
+   /*  margin: 1rem 0;; */
 }
 
 main .container{
@@ -269,7 +271,7 @@ main .container{
     color: var(--btn-txt-color);
     border-radius: 5px;
     border: solid 1px var(--btn-border-color);
-    padding:0.5rem 1rem 0.5rem 1rem;
+    padding:0.25rem 1rem;
     text-decoration: none;
     /* align-self: flex-end; */
     transition: 0.5s;
@@ -282,9 +284,19 @@ main .container{
     border-color: var(--btn-inactive-border-color);
 }
 
+.btn:hover{
+    /* background-color: #1962a7; */
+    background-color: var(--btn-hover-color);
+    color: var(--btn-txt-hover-color);
+}
+
+.btnInactive:hover{
+    background-color: var(--btn-inactive-border-color);
+}
+
 /* INDEX */
 #indexMain{
-    width: 85%;
+    width: 90%;
     max-width:1180px;
 }
 
@@ -293,9 +305,11 @@ main .container{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    /* background-color: coral; */
 }
 
+#topListe p{
+    margin: 0;
+}
 
 #topListe h2{
     flex:1;
@@ -304,6 +318,7 @@ main .container{
 
 #displayType{
     display: flex;
+    flex-direction: column;
     justify-content: end;
     font-size: 1rem;
 }
@@ -316,15 +331,9 @@ main .container{
     margin-left: 0.5rem;
 }
 
-
-
-
-
-
-
 /* ACCUEIL */
 .studentList{
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 0.5rem;
@@ -332,24 +341,27 @@ main .container{
 }
 
 .studentCards{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.65rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
 }
 
 .listItem{
     padding: 0.5rem 1rem;
-   /*  width: 100%; */
-   /*  text-decoration: none; */
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+   /*  align-items:center;
+ */
+    /* align-content: center; */
 }
 
 .listItem p{
     width: 30%;
-    /* height: 0; */
-    align-self: center;
-/*     padding-top: 0.5rem; */
+    display: inline;
+    
+    align-self:center;
+    margin-bottom: 0;
+   align-self: center;
 }
 
 .listItem p:last-of-type{
@@ -370,13 +382,13 @@ main .container{
 
 .cardItem p{
     width: 100%;
-    padding: 0;
+  
 }
 
 
 .cardItem p:last-of-type{
     width:100%;
-    height: 3rem;
+   /*  height: 2rem; */
 }
 
 .cardItem .btn{
@@ -449,8 +461,7 @@ main .container{
 }
 
 #dialog-header-info h3{
-    margin-bottom: 0; 
-    
+    margin-bottom: 0;   
 }
 
 #prenom{
@@ -483,14 +494,21 @@ main .container{
     background: transparent;
     border: none;
     cursor: pointer;
+    color: var(--txt-color);
 }
+/* 
+svg .dark{
+    
+} */
+
 
 /* MAP */
 section:has(.map){
-    height:1000px;
+    height:500px;
 }
+
 #mapContainer{
-    height:95;
+    height:93%;
     
 }
 
@@ -510,7 +528,7 @@ section:has(.map){
 }
 
 .prefForm{
-    width: 40%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -563,15 +581,9 @@ section:has(.map){
 }
 
 .infoText{
-    width:65%;
+    width:100%;
 }
 
-.infoText p{/* 
-    margin-bottom: 0.5rem; */
-    /* font-size: 1.2rem;
-    font-weight:300; *//* 
-    margin-bottom: 1rem; */
-}
 
 .utilsLinks{
    /*  width: 40%; */
@@ -581,10 +593,10 @@ section:has(.map){
 .utilsLinks li{
     list-style: none;
     border-bottom: solid 1px var(--nav-color);
-    /* padding-bottom: 1rem; */
+    padding-bottom: 1rem;
     display: flex;
-    flex-direction: column;/* 
-    margin-bottom: 1rem; */
+    flex-direction: column;
+    margin-bottom: 1rem;
     gap: 0.5rem;
 }
 
@@ -649,7 +661,9 @@ address{
     display: none;
 }
 
-@media screen and (max-width: 992px){
+
+
+/* @media screen and (max-width: 992px){
     #burger{
         display: block;
     }
@@ -661,19 +675,65 @@ address{
         display: flex;
         animation: slideDown 0.4s ease forwards;
     }
+} */
+
+
+
+
+
+@media screen and (min-width: 576px){
+    .studentCards{
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 0.65rem; */
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    #displayType{
+        flex-direction: row;
+    }
+
+    .prefForm{
+        width: 80%;
+    }
+
 }
 
 
-@media screen and (max-width: 992px){
-    #burger{
-        display: block;
-    }
-    nav ul{
-        display: none;
+@media screen and (min-width: 768px){
+    .studentCards{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
     }
 
-    .navMobileShow{
+    .infoText{
+        width:65%;
+    }
+
+    .prefForm{
+        width: 70%;
+    }
+
+}
+
+
+
+@media screen and (min-width: 992px){
+    #burger{
+        display: none;
+    }
+    nav ul{
         display: flex;
-        animation: slideDown 0.4s ease forwards;
+    }
+
+    .prefForm{
+        width: 50%;
+    }
+    
+    .studentCards{
+        grid-template-columns: repeat(4, 1fr);
+        /* gap: 0.65rem; */
     }
 }

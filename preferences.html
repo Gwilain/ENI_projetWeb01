@@ -8,82 +8,80 @@
     
 </head>
 <body>
-        <header>
-            <div class="container">
-                <a href="index.html"><img id="logo" src="images/logo.png" alt="logo ENI"></a>
-                <h1>Promo D2WM 2025</h1>
-
-                <div id="menu">
-                    <nav id="navHorizontal">
-                        <ul>
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="carte.html">Carte</a></li>
-                            <li><a href="informations.html">Informations</a></li>
-                            <li><a class="menucurrentPage" href="preferences.html">Préférences</a></li>
-                        </ul>
-                    </nav>
-                    
-                    <button id="burger" aria-label="Menu">&#9776;</button>
-                </div>
-            </div>
-        </header>
-        <nav class="navMobile">
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo"><img id="logo" src="images/logo.png" alt="logo ENI"></a>
+            <h1>Promo D2WM 2025 </h1>
+    
             
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="carte.html">Carte</a></li>
-                <li><a href="informations.html">Informations</a></li>
-                <li><a class="menucurrentPage" href="preferences.html">Préférences</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section class="container">  
-                <h2>Préférences du site</h2>
-                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="carte.html">Carte</a></li>
+                        <li><a href="informations.html">Informations</a></li>
+                        <li><a class="menucurrentPage" href="preferences.html">Préférences</a></li>
+                    </ul>
 
-                <div id="prefMain" class="content">
-                
-                        <form class="prefForm">
+                    <button id="burger" aria-label="Menu">&#9776;</button>
+                </nav>
+        </div>
+    </header>
+    <nav class="navMobile">  
+        <ul class="container">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="carte.html">Carte</a></li>
+            <li><a href="informations.html">Informations</a></li>
+            <li><a class="menucurrentPage" href="preferences.html">Préférences</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="container">  
+            <h2>Préférences du site</h2>
+            
 
-                            <div class="prefTheme">
-                                <label  for="theme">Thème du site</label>
+            <div id="prefMain" class="content">
+            
+                    <form class="prefForm">
+
+                        <div class="prefTheme">
+                            <label  for="theme">Thème du site</label>
+                            
+                            <select id="selectTheme" name="theme">
+                                <option value="light">Clair</option>
+                                <option value="dark">Sombre</option>
+                            </select>
+                        </div>
+
+                        <div class="prefDisplayList">
+
+                            <p>Format d'affichage de l'accueil :</p>
+                            
+                            <div class="radiosDisplay">
+                                <input type="radio" name="display" id="radioList" checked value="list">
+                                <label for="radioList">Liste</label>
                                 
-                                <select id="selectTheme" name="theme">
-                                    <option value="light">Clair</option>
-                                    <option value="dark">Sombre</option>
-                                </select>
+                                <input type="radio" name="display" id="radioCard" value="card">
+                                <label for="radioCard">Cartes</label>
                             </div>
 
-                            <div class="prefDisplayList">
+                        </div>
+                        <div class="prefBtns">
+                            <button id="cancelBtn" class="btn btnInactive">Annuler</button>
+                            <button id="savePref" class="btn">Valider</button>
+                        </div> 
+                    </form>
 
-                                <p>Format d'affichage de l'accueil :</p>
-                                
-                                <div class="radiosDisplay">
-                                    <input type="radio" name="display" id="radioList" checked value="list">
-                                    <label for="radioList">Liste</label>
-                                    
-                                    <input type="radio" name="display" id="radioCard" value="card">
-                                    <label for="radioCard">Cartes</label>
-                                </div>
-
-                            </div>
-                            <div class="prefBtns">
-                                <button id="cancelBtn" class="btn btnInactive">Annuler</button>
-                                <button id="savePref" class="btn">Valider</button>
-                            </div> 
-                        </form>
-
-            </section>
-        </main>
-        
-        <footer>
-            <div class="container">
-                <img id="logo" src="images/logo.png" alt="logo ENI">
-                <address>
-                    ENI Ecole <br>3 Rue Michael Faraday<br>44800 Saint-Herblain
-                </address>
-            </div>
-        </footer>
-        <script src="js/script.js"></script>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <img id="logo" src="images/logo.png" alt="logo ENI">
+            <address>
+                ENI Ecole <br>3 Rue Michael Faraday<br>44800 Saint-Herblain
+            </address>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
