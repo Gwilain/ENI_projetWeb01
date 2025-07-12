@@ -17,6 +17,7 @@ L'objectif était de concevoir un mini-site vitrine présentant les **stagiaires
 - Une page "Préférences" permettant :
   - Le **choix de la mise en page** de la page d’accueil
   - Le **changement de thème clair/sombre** (via `localStorage`)
+- Le site doit être responsive (aucune maquette n'a été fournie hormis un wireframe)
 
 ### 🔍 Aperçu
 #### 🏠 Page d'accueil
@@ -30,13 +31,13 @@ L'objectif était de concevoir un mini-site vitrine présentant les **stagiaires
 ![screenshot de la page infos](./screenshots/02_infos.jpg)
 
 
-#### ℹ️ Page de préfèrences
+#### 🛠️ Page de préfèrences
 ![screenshot de la page infos](./screenshots/03_pref.jpg)
 
-#### ℹ️ Page de préfèrences en mode sombre
+#### 🌙 Page de préfèrences en mode sombre
 ![screenshot de la page infos](./screenshots/04_pref_dark.jpg)
 
-#### ℹ️ Page d'accueil en mode sombre, affichage cards + popin détails
+#### 🏠 Page d'accueil en mode sombre, affichage cards + popin détails
 ![screenshot de la page infos](./screenshots/05_home_cards_details.jpg)
 
 #### 🗺️ Carte des stagiaires en mode sombre
@@ -44,6 +45,10 @@ L'objectif était de concevoir un mini-site vitrine présentant les **stagiaires
 
 #### ℹ️ Page d'infos en mode sombre
 ![screenshot de la page infos](./screenshots/07_infos_dark.jpg)
+
+
+#### 🏠 Accueil responsive
+![screenshot de la page infos](./screenshots/08_responsive.jpg)
 
 
 ### 👨‍💻 Auteur
