@@ -7,7 +7,7 @@
 
 ### 📝 Description
 
-Il s'agit du **premier projet réalisé en autonomie** après seulement 1 mois de formation à l'ENI.
+Il s'agit du **premier projet réalisé en autonomie** sur une semaine après seulement 1 mois de formation à l'ENI.
 
 L'objectif était de concevoir un mini-site vitrine présentant les **stagiaires de notre promotion** avec plusieurs fonctionnalités clés :
 
