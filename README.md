@@ -8,6 +8,9 @@
 ### 📝 Description
 
 Il s'agit du **premier projet réalisé en autonomie** sur une semaine après seulement 1 mois de formation à l'ENI.
+Le site est en ligne à cette adresse :
+
+👉 [www.machintruc.tv/eni_projet_01/](https://machintruc.tv/eni_projet_01/)
 
 L'objectif était de concevoir un mini-site vitrine présentant les **stagiaires de notre promotion** avec plusieurs fonctionnalités clés :
 
